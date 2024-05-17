@@ -9,7 +9,7 @@ public class ContaTerminal {
         int Numero;
         String Agencia;
         String NomeCliente;
-        BigDecimal Saldo;
+        double  Saldo;
 
         System.out.println("Olá! Por favor, insira o seu nome:");
         NomeCliente = sc.nextLine();
@@ -18,11 +18,13 @@ public class ContaTerminal {
         Numero = sc.nextInt();
 
         System.out.println("Agora insira a sua agência bancária:");
-        Agencia = sc.nextLine();
+        Agencia = sc.next();
 
         System.out.println("Certo, agora digite o saldo da conta:");
-        Saldo = sc.nextBigDecimal();
+        Saldo = sc.nextDouble();
 
-        //System.out.println($"Olá {sc.NomeCliente}, obrigado por criar uma conta em nosso banco, sua agência é {Agencia}, conta {Numero} e seu saldo {Saldo} já está disponível para saque");
+        String msg = "Olá "+NomeCliente+", obrigado por criar uma conta em nosso banco, sua agência é "+Agencia+", conta "+Numero+" e seu saldo Bruna"+Saldo+" já está disponível para saque";
+
+        System.out.println(msg);
     }
 }
